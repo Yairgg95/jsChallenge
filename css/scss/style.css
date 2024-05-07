@@ -19,4 +19,13 @@
 #navbar-image {
   width: auto;
   height: 40px;
+}
+
+#member-button {
+  width: auto;
+  height: 40px;
+}
+#member-button .avatar {
+  width: auto;
+  height: 40px;
 }/*# sourceMappingURL=style.css.map */

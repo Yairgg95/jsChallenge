@@ -31,28 +31,32 @@
     />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="manifest" href="assets/site.webmanifest" />
-    <title>Dev To JavaScript</title>
+    <title>DEV Community</title>
   </head>
 
   <body>
     <!-- NavBar  1-->
     <div id="mainContainer">
       <div class="containerNav">
-        <nav class="container-flex-row navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-flex-row">
+        <nav class=" navbar sticky-top bg-body-tertiary">
+          <div class="container-fluid p-0 d-flex justify-content-start">
             <img id="navbar-image" class="imagen" src="../assets/original_logo_0DliJcfsTcciZen38gX9.png"/>
-            <div>
-              <input class="input-text" type="text" placeholder="Search..." />
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+            </form>
+            <button class="btn btn-outline-primary d-flex justify-content-end " type="button">Create Post</button>
+                <a href="/notifications" id="notifications-link" class="c-link c-link--icon-alone c-link--block mx-1" aria-label="Notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="adjfhuy7hl7ostjvbblf7bm9bcul8q7o" class="crayons-icon"><title id="adjfhuy7hl7ostjvbblf7bm9bcul8q7o">Notifications</title>
+              <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z"></path>
+          </svg>
+        </a>
+        <div class="crayons-header__menu mx-1" id="crayons-header__menu">
+            <button type="button" class="border border-0 rounded-circle" id="member-button" aria-label="Navigation menu" aria-expanded="false">
+                <img class="avatar rounded-circle" alt="" id="nav-profile-image" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1474056%2Fabc742de-c2bf-4c89-ba0c-adddf725007b.png">
+            </button>
+            
+         </div>
             </div>
-          </div>
-          <div class="container-flex-row">
-            <div class="login">
-              <a href="">log in</a>
-            </div>
-            <div class="botton-link">
-              <a href="./form.html">New post</a>
-            </div>
-          </div>
         </nav>
       </div>
       <!-- Section Main -->
