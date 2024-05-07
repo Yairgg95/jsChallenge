@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,14 @@
     <title>Formulario</title>        
     <link rel="shortcut icon" href="/assets/favicon-16x16.png">
   </head>
-<header><!-- NavBar  1-->
+  <header>
+    <!-- NavBar  1-->
     <div class="containerNav">
       <nav class="container-flex-row navbar">
         <div class="container-flex-row">
           <img
             class="imagen"
-            src="./img/resized_logo_UQww2soKuUsjaOGNB38o.png" width="40" height="40"/> 
+            src="/assets/original_logo_0DliJcfsTcciZen38gX9.png" width="40" height="40"/> 
             <h4 class="text-left">Create Post</h4>
         </div>
       </nav>
@@ -28,48 +29,29 @@
 
   <body class="container">
             <form id="new-post" class="container d-flex flex-column gap-3" style="width: 60%;">
-        <input class="form-control" 
-            type="text" name="titulo" 
-            id="Post-Title"
-            placeholder="New Post Title Here"
-            style="font-size: 30px;">
+        <input class="form-control" type="text" name="titulo" placeholder="New Post Title Here" style="font-size: 30px;">
 
         <div class="tagcontainer">
           <div class="">
             <input onkeyup="parse();" type="text" 
-                id="placetags" 
+                id="tags_input" 
                 placeholder="Add up to 4 tags"
                 name="tagsin" 
                 maxlength="80" 
                 class="form-control">
           </div>
-          <div class="col-sm-6" id="Post-tagsInput" name="tagsdiv">
+          <div class="col-sm-6" id="tags" name="tagsdiv">
           </div>
-        <input class="form-control" type="text" 
-            id="Post-author"
-            name="autor" 
-            placeholder="Nombre">
+        <input class="form-control" type="text" name="autor" placeholder="Nombre">
         <div data-mdb-input-init class="form-outline w-100 form-group mb-6">
-          <textarea class="form-control" 
-              id="Post-content" rows="6" 
-              placeholder="Write your post content here" 
-              name="contenido" style="background: #fff;"></textarea>
+          <textarea class="form-control" id="textAreaExample" rows="6" 
+          placeholder="Write your post content here" 
+          name="contenido" style="background: #fff;"></textarea>
         </div>
         <!--  <input class="form-date" type="date" name="fecha" />  -->
-        <input class="form-control"  
-                id="Post-reacctions"
-                type="number" 
-                name="reacciones" 
-                placeholder="Reacciones" />
-        <input class="form-control" type="number" 
-                id="Post-comentaries"
-                name="comentarios" 
-                placeholder="Comentarios" />
-        <input class="form-control" 
-            type="text" 
-            id="Post-picture"
-            name="imagen" placeholder="Ingresa URL de imagen">
-
+        <input class="form-control"  type="number" name="reacciones" placeholder="Reacciones" />
+        <input class="form-control" type="number" name="comentarios" placeholder="Comentarios" />
+        <input class="form-control" type="text" name="imagen" placeholder="Ingresa URL de imagen">
         <button type="submit" class="mx-6 btn btn-outline-primary" id="btnPost">Publish</button>
         <button type="submit" id="btnUpdate" class="mx-5 btn btn-danger" hidden>Edit</button>
       </form>
@@ -78,16 +60,6 @@
     <script src="./js/form.js" type="module"></script>
     <script src="/js/tags.js"></script>
 
-<!--
-          <div class="d-flex gap-4">
-            <input class="form-check-input " id="html" type="checkbox" name="hashtags" value="html" />
-            <label class="form-check-label "  for="html">HTML</label>
-            <input class="form-check-input "  id="js" type="checkbox" name="hashtags" value="js" />
-            <label class="form-check-label " for="js">JavaScript</label>
-            <input class="form-check-input "  id="css" type="checkbox" name="hashtags" value="css" />
-            <label class="form-check-label " for="css">CSS</label>
-            <input class="form-check-input "  id="python" type="checkbox" name="hashtags" value="python" />
-            <label class="form-check-label " for="python">Python</label>
-          </div>-->
+
   </body>
 </html>
