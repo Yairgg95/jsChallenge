@@ -1,7 +1,7 @@
 const Posts_BASE_URL = "https://post-9851b-default-rtdb.firebaseio.com/posts";
 
 const createPost = async (PostObject) => {
-  let response = await fetch(`${PostS_BASE_URL}/.json`, {
+  let response = await fetch(`${Posts_BASE_URL}/.json`, {
     method: "POST",
     body: JSON.stringify(PostObject),
   });
