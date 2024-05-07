@@ -1,3 +1,6 @@
+import previewData from './modules/update.js'
+import validateForm from './modules/validateform.js'
+
 document.addEventListener('DOMContentLoaded', () => {
     const currentId = new URLSearchParams(location.search).get('post')
     currentId && previewData(currentId)
