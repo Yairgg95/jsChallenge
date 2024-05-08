@@ -22,5 +22,13 @@ const fetchAllPosts = async () => {
   let PostsArray = keys.map((key) => ({ ...data[key], key }));
   return PostsArray;
 };
-
-export { createPost, fetchPostByKey, fetchAllPosts };
+const deletePost = async (postId) => {
+  let response = await fetch(`${Posts_BASE_URL}/${postId}`, {
+    method: "DELETE",
+  });
+  if (!response.ok) {
+    throw new Error(`Error deleting post: ${response.statusText}`);
+  }
+  return await response.json(); 
+};
+export { createPost, fetchPostByKey, fetchAllPosts, deletePost };

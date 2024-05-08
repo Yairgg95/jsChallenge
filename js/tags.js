@@ -1,7 +1,7 @@
 let tags = []; // Array to store processed tags
 let parse = () => {
-  const tagInput = document.getElementById("tags_input");
-  const tagsContainer = document.getElementById("tags");
+  const tagInput = document.getElementById("placetags");
+  const tagsContainer = document.getElementById("Post-tagsInput");
   const inputValue = tagInput.value.trim();
   const noCommaValue = inputValue.replace(/,/g, "");
 
