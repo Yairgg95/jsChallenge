@@ -26,5 +26,6 @@ publishPost.addEventListener("click", async () => {
   console.log(PostObject);
   let savedPost = await createPost(PostObject);
   console.log(savedPost);
+  window.open("../../views/homepage.html", "_self");
 });
-window.open(origin)
+
