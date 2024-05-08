@@ -21,17 +21,13 @@
   height: 40px;
 }
 
-#member-button {
-  width: auto;
-  height: 40px;
-}
-#member-button .avatar {
-  width: auto;
-  height: 40px;
-}
-
 .mainlink {
   list-style: none;
+}
+
+#member-menu-button {
+  width: auto;
+  height: 40px;
 }
 
 #nav-profile-image {
