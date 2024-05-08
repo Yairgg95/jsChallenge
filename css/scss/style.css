@@ -1,0 +1,31 @@
+#logo-dev {
+  width: auto;
+  height: 48px;
+}
+
+.registration-hr {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.or-text {
+  color: #999;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+#navbar-image {
+  width: auto;
+  height: 40px;
+}
+
+#member-button {
+  width: auto;
+  height: 40px;
+}
+#member-button .avatar {
+  width: auto;
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */
