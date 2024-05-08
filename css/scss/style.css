@@ -28,4 +28,13 @@
 #member-button .avatar {
   width: auto;
   height: 40px;
+}
+
+.mainlink {
+  list-style: none;
+}
+
+#nav-profile-image {
+  width: auto;
+  height: 40px;
 }/*# sourceMappingURL=style.css.map */
