@@ -1,4 +1,4 @@
-import { fetchPostByKey } from "./modules/postApi.js";
+import { fetchPostByKey } from "./modules/PostApi.js";
 /*Para extraer parámetros de la url:*/
 /*1: Guardamos la url en una variable*/
 const url = window.location.href;
