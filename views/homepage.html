@@ -31,28 +31,32 @@
     />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="manifest" href="assets/site.webmanifest" />
-    <title>Dev To JavaScript</title>
+    <title>DEV Community</title>
   </head>
 
   <body>
     <!-- NavBar  1-->
     <div id="mainContainer">
       <div class="containerNav">
-        <nav class="container-flex-row navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-flex-row">
+        <nav class=" navbar sticky-top bg-body-tertiary">
+          <div class="container-fluid p-0 d-flex justify-content-start">
             <img id="navbar-image" class="imagen" src="../assets/original_logo_0DliJcfsTcciZen38gX9.png"/>
-            <div>
-              <input class="input-text" type="text" placeholder="Search..." />
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+            </form>
+            <button class="btn btn-outline-primary d-flex justify-content-end " type="button">Create Post</button>
+                <a href="#" id="notifications-link" class="c-link c-link--icon-alone c-link--block mx-1" aria-label="Notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="adjfhuy7hl7ostjvbblf7bm9bcul8q7o" class="crayons-icon"><title id="adjfhuy7hl7ostjvbblf7bm9bcul8q7o">Notifications</title>
+              <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z"></path>
+          </svg>
+        </a>
+        <div class="crayons-header__menu mx-1" id="crayons-header__menu">
+            <button type="button" class="border border-0 rounded-circle" id="member-button" aria-label="Navigation menu" aria-expanded="false">
+                <img class="avatar rounded-circle" alt="" id="nav-profile-image" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1474056%2Fabc742de-c2bf-4c89-ba0c-adddf725007b.png">
+            </button>
+            
+         </div>
             </div>
-          </div>
-          <div class="container-flex-row">
-            <div class="login">
-              <a href="">log in</a>
-            </div>
-            <div class="botton-link">
-              <a href="./form.html">New post</a>
-            </div>
-          </div>
         </nav>
       </div>
       <!-- Section Main -->
@@ -66,7 +70,7 @@
 
             <!-- Main Links List 3-->
             <nav class="links temp-container">
-              <ul class="logo-links">
+              <ul id="logo-link" class="logo-links">
                 <li class="mainlink">
                   <span class="c-link__icon">
                     <svg
@@ -102,7 +106,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Home</a></span>
+                  <span><a class="text-decoration-none" href="#">Home</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -157,7 +161,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Reading List</a></span>
+                  <span><a class="text-decoration-none" href="#">Reading List</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -205,7 +209,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Podcasts</a></span>
+                  <span><a class="text-decoration-none" href="#">Podcasts</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -229,7 +233,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Videos</a></span>
+                  <span><a class="text-decoration-none" href="#">Videos</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -255,7 +259,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Tags</a></span>
+                  <span><a class="text-decoration-none" href="#">Tags</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -289,7 +293,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">FAQ</a></span>
+                  <span><a class="text-decoration-none" href="#">FAQ</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -317,7 +321,7 @@
                       ></path>
                     </svg>
                   </span>
-                  <span><a href="#">Forem Shop</a></span>
+                  <span><a class="text-decoration-none" href="#">Forem Shop</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -333,7 +337,7 @@
                       ></path>
                     </svg>
                   </span>
-                  <span><a href="#">Advertise on DEV</a></span>
+                  <span><a class="text-decoration-none" href="#">Advertise on DEV</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -373,7 +377,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">About</a></span>
+                  <span><a class="text-decoration-none" href="#">About</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -399,7 +403,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Contact</a></span>
+                  <span><a class="text-decoration-none" href="#">Contact</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -502,7 +506,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Guides</a></span>
+                  <span><a class="text-decoration-none" href="#">Guides</a></span>
                 </li>
                 <li class="mainlink">
                   <span class="c-link__icon">
@@ -633,7 +637,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span><a href="#">Software Comparisons</a></span>
+                  <span><a class="text-decoration-none" href="#">Software Comparisons</a></span>
                 </li>
               </ul>
             </nav>
@@ -662,7 +666,7 @@
                       ></path>
                     </g>
                   </svg>
-                  <a href="#">Code of Conduct </a>
+                  <a class="text-decoration-none" href="#">Code of Conduct </a>
                 </div>
                 <div class="otherItem">
                   <svg
@@ -695,7 +699,7 @@
                       ></path>
                     </g>
                   </svg>
-                  <a href="#">Privacy Policy</a>
+                  <a class="text-decoration-none" href="#">Privacy Policy</a>
                 </div>
                 <div class="otherItem">
                   <svg
@@ -755,7 +759,7 @@
                       ></circle>
                     </g>
                   </svg>
-                  <a href="#">Terms of use</a>
+                  <a class="text-decoration-none" href="#">Terms of use</a>
                 </div>
               </div>
             </section>
@@ -872,7 +876,7 @@
               </a>
             </div>
             <!-- Popular Tags 6-->
-            <h3>Popular Tags</h3>
+            <h3>My Tags</h3>
             <div class="popular-tags">
               <div class="tagCont">
                 <a href="https://dev.to/t/webdev">#webdev</a>
