@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/">
+    <title>Maquetado DEVTO</title>
+</head>
+
+<body class="bg-body-secondary">
+    <header class="sticky-top">
+        <nav class="navbar bg-white mb-3 shadow-sm">
+            <div class="container-fluid">
+              <div class="left__nav--section d-flex">
+                <button class="navbar-toggler d-md-none " type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="./index.html" class="logo__button--header"><img class="site-logo__img" style="height: 40px; width: 50px;"
+                    src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+                    alt="DEV Community"></a>
+                <div class="search__nav--section d-none d-md-block">
+                  <form class="d-flex " role="search">
+                    <input class="form-control me-2" style="width: 420px;" type="search" placeholder="Search"
+                      aria-label="Search">
+                    <button class="btn position-absolute" id="buttonforsearch" type="submit"><a href="#"
+                        class="mx-2"><img src="./img/search_icon.svg" alt="search_icon"></a></button>
+                  </form>
+                </div>
+              </div>
+              <div class="right__nav--section d-flex flex-nowrap mx-1">
+                <a class="right__nav--section--search d-md-none" href="#" class="mx-2"><img src="./img/search_icon.svg"
+                    alt="search_icon"></a>
+                <a href="#" class="mx-2"><img src="./img/bell_icon.svg" alt="bell_icon"></a>
+                <a href="#" class="mx-2"><img class="crayons-avatar__image" alt="" id="nav-profile-image"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ay3RvrXi--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/975225/4f71a4bb-4099-4ccf-9a89-f755a94da6b9.png"></a>
+              </div>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-weight: bold;">DEV Community</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link">🏠Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🗃️Reading List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">📃Listings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🎙️Podcasts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🎥Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🏷️Tags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🛍️Forem Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">❤️Sponsors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🏳️‍🌈About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">📯Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">📖Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🤔Software comparisons</a></li>
+                  </ul>
+                  <h5 class="my-3" style="font-weight: bold;">Other</h5>
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link" href="#">👍Code of Conduct</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">🤓Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">👀Terms of use</a></li>
+                  </ul>
+                  <div class="d-inline-flex justify-content-start mx-1 my-4" style="width: 100%;top: 50px;">
+                    <a href="#" class="mx-2"><img src="./img/twitter.svg" alt="twitter"></a>
+                    <a href="#" class="mx-2"><img src="./img/facebook.svg" alt="facebook"></a>
+                    <a href="#" class="mx-2"><img src="./img/github.svg" alt="github"></a>
+                    <a href="#" class="mx-2"><img src="./img/instagram.svg" alt="instagram"></a>
+                    <a href="#" class="mx-2"><img src="./img/twitch.svg" alt="twitch"></a>
+                    <a href="#" class="mx-2"><img src="./img/fosstodon.svg" alt="fosstodon"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1 d-none d-md-block position-sticky">
+                    <ul style="list-style: none;" class="" id="aside-post">
+                        <li class="nav-item">
+                            <a class="m-2" href="#"><img style="width: 2vw;" src="./img/heart.svg"
+                                    alt="icon-search"></a>
+                        </li>
+                        <li>
+                            <a class="m-2" href="#"><img style="width: 2vw;" src="../img/comment-svgrepo-com.svg"
+                                    alt="comment"></a>
+                        </li>
+                        <li>
+                            <a class="m-2" href="#"><img style="width: 2vw;" src="../img/bookmark-svgrepo-com.svg"
+                                    alt="bookmark"></a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="#" class="d-flex align-items-center link-dark text-decoration-none"
+                                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../img/three-dots-menu-svgrepo-com.svg" alt="" class="rounded-circle mx-2"
+                                        style="width: 2vw">
+                                </a>
+                                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                    <li><a class="dropdown-item" href="#">Copy Link</a></li>
+                                    <li><a class="dropdown-item" href="#">Share to Twitter</a></li>
+                                    <li><a class="dropdown-item" href="#">Share to Linkedin</a></li>
+                                    <li><a class="dropdown-item" href="#">Share to Reddit</a></li>
+                                    <li><a class="dropdown-item" href="#">Share to Facebook</a></li>
+                                    <li><a class="dropdown-item" href="#">Report abuse</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-md-9 col-xl-6">
+                    <div class="position">
+                        <article class="blog-post bg-body-tertiary rounded">
+                            <img src="../img/titlePost.png" class="img-fluid" alt="TitlePost">
+                            <p class="blog-post-meta p-3">
+                                Posted on
+                                <time datetime="2022-11-18T12:42:15Z" class="date-no-year"
+                                    title="Friday, November 18, 2022 at 6:42:15 AM">Nov 18</time>
+                                • Originally published at
+                                <a href="#">profy.dev</a>
+                            </p>
+                            <h2 class="p-2">Data Structures In Frontend JavaScript In The Real World (With React Code
+                                Examples)</h2>
+                            <a href="#" class="ms-5">#react</a>
+                            <a href="#">#javascript</a>
+                            <a href="#">#webdev</a>
+                            <a href="#">#frontend</a>
+                            <p class="p-4">Data structures can be intimidating. Especially for the self-taught folks
+                                among us. If you
+                                already tried to study data structures in JavaScript you know what typically happens:
+                            </p>
+                            <ol>
+                                <li>A bunch of CS theory is thrown at you.</li>
+                                <li>You read pages of code that manually implement e.g. a linked list.</li>
+                                <li>All the examples are abstract using foo and bar or cats and dogs.</li>
+                            </ol>
+                            <img src="../img/postImage1.png" class="img-fluid mt-5 alt=" PostImage">
+                            <div class="container mt-5">
+                                <h3>Comentarios</h3>
+                                <div class="mb-3">
+                                    <textarea class="form-control" placeholder="Añade un comentario..." rows="3"></textarea>
+                                    <button class="btn btn-primary mt-2">Enviar</button>
+                                </div>
+                                <div class="comments-list">
+                                    <!-- Ejemplo de un comentario -->
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="https://ca.slack-edge.com/TCRFJBKB6-U0275TN36E8-db6aee7f44f9-512" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px;">
+                                                <strong class="ms-2">Emi Mentor</strong>
+                                            </div>
+                                            <p class="card-text">Este es un comentario. Puede contener texto, como chismes, historias de terror, chistes, opiniones....</p>
+                                        </div>
+                                    </div>
+                                    <!-- Más comentarios... -->
+                                </div>
+                            </div>
+                        </article>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-4 d-none d-xl-block">
+                    
+                    <div class="position">
+                        <div class="p-4 mb-4 bg-light rounded">
+                            <div class="d-flex">
+                                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ea1OGrCb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1/f451a206-11c8-4e3d-8936-143d0a7e65bb.png"
+                                    class="crayons-avatar__image" alt="" loading="lazy">
+                                <h5 class="fst-italic">Gloria Maldonado</h5>
+                            </div>
+                            
+                            <button type="button"
+                                class="btn btn-primary d-grid gap-2 col-12 mx-auto mx-3">Follow</button>
+                            <p>Howdy, I’m Gloria. I’m a web developer living in United States. I am a fan of
+                                shop, data, and technology.</p>
+                            <h7 style="font-weight: bold;">LOCATION</h7>
+                            <p>NY, United States</p>
+                            <h7 style="font-weight: bold;">EDUCATION</h7>
+                            <p>International Business, Florida University</p>
+                            <h7 style="font-weight: bold;">WORK</h7>
+                            <p>Analyzify</p>
+                        </div>
+                       
+
+                        <div class="card right-aside mt-3">
+                            <div class="card-body">
+                              <h5 class="right-aside--help mb-4"><strong>#discuss</strong></h5>
+                              <p class="right-aside--help">Team or Solo: Which Path Leads to Project Success?<br><span class="aside__span--small">8 comments</span></p>
+                              <div></div>
+                              <p class="right-aside--help">What was your win week?<br><span class="right-aside--span">New</span></p>
+                              <p class="right-aside--help">So...  Is this PHP's Redemption? 😳<br><span class="aside__span--small">2 comments</span></p>
+                              <p class="right-aside--help">What you learning about this weekend<br><span class="aside__span--small">7 comments</span></p>
+                              <p class="right-aside--help">AWhat inspired you to become a web developer<br><span class="aside__span--small">2 comments</span></p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer__container bg-body-secondary">
+        <p class="footer__container-text " style="text-align: center;"><a style="text-decoration: none;"
+                href="https://dev.to/">DEV Community</a>—A constructive and inclusive social network for software
+            developers. With you every step of your journy.</p>
+        <ul class="footer__container-list d-flex flex-wrap "
+            style=" display: flex; justify-content:center; list-style: none; ">
+            <li class="footer__container-list-link " style="list-style: none; "><a style="text-decoration: none"
+                    href="">Home</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Listing</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Postcasts</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Videos</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Tags</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">FAQ</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Forem Shop</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Sponsors</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">About</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Contact</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Guides</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Software comparasions</a>
+            </li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Code of Conduct</a></li>
+            <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Privacy</a></li>
+        </ul>
+        <p class="footer__container-text-2 " style="text-align: center;">Built on <a style="text-decoration: none; "
+                href="https://dev.to/">Forem</a>—the <a style="text-decoration: none; " href="https://dev.to/">open
+                source</a> software that powers <a style="text-decoration: none; " href="https://dev.to/">DEV</a> and
+            other inclusive communities.</p>
+        <p class="footer__container-text-3 " style="text-align: center;">Made with love and <a
+                style="text-decoration: none; " href="https://dev.to/">Ruby On Rails</a>. Dev community © 2016 - 2023.
+        </p>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
