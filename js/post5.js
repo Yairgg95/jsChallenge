@@ -106,4 +106,4 @@ const printAllPosts = async () => {
   }
 };
 
-printAllPost
+printAllPost()
