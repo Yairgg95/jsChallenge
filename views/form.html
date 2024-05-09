@@ -45,17 +45,20 @@
           </div>
           <div class="col-sm-6" id="Post-tagsInput" name="tagsdiv">
           </div>
+
         <input class="form-control" type="text" 
             id="Post-author"
             name="autor" 
-            placeholder="Nombre">
+            placeholder="Autor">
+        
+            <img src="../assets/format2.jpg" alt="FormateoContenido" width="95%" height="90%">
+
         <div data-mdb-input-init class="form-outline w-100 form-group mb-6">
           <textarea class="form-control" 
               id="Post-content" rows="6" 
               placeholder="Write your post content here" 
               name="contenido" style="background: #fff;"></textarea>
         </div>
-        <!--  <input class="form-date" type="date" name="fecha" />  -->
         <input class="form-control"  
                 id="Post-reacctions"
                 type="number" 
@@ -69,7 +72,6 @@
             type="text" 
             id="Post-picture"
             name="imagen" placeholder="Ingresa URL de imagen">
-
         <button type="button" class="mx-6 btn btn-outline-primary" id="btnPost">Publish</button>
         <button type="submit" id="btnUpdate" class="mx-5 btn btn-danger" hidden>Edit</button>
       </form>
