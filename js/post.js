@@ -2,7 +2,7 @@ const postContainer = document.getElementById('post-container');
 
 const fetchPosts = async () => {
   try {
-    const response = await fetch('https://post-9851b-default-rtdb.firebaseio.com');
+    const response = await fetch('https://post-9851b-default-rtdb.firebaseio.com/posts');
     const posts = await response.json();
     return posts;
   } catch (error) {
