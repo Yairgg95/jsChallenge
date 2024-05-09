@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/scss/style.css">
+  <link rel="icon" href="../assets/original_logo_0DliJcfsTcciZen38gX9.png" type="image"> 
+ <script src="../js/post.js"></script>
+  <title>DEV Community</title>
+</head>
+
+<body class="bg-body-tertiary">
+  <nav class="navbar bg-white fixed-top mb-5 shadow-sm" id="navbar__container">
+    <div class="container-fluid">
+      <div class="left__nav--section d-flex">
+        <button class="navbar-toggler d-md-none " type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" class="logo__button--header"><img class="site-logo__img" style="height: 40px; width: 50px;"
+            src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+            alt="DEV Community"></a>
+        <div class="search__nav--section d-none d-md-block">
+          <form class="d-flex " role="search">
+            <input class="form-control me-2" style="width: 420px;" type="search" placeholder="Search"
+              aria-label="Search">
+            <button class="btn " id="buttonforsearch" type="submit">
+              <svg id="find-Btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="crayons-icon c-btn__icon" focusable="false"><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="right__nav--section d-flex flex-nowrap mx-1">
+        <!-- botones -->
+      <a href="./form.html"><button id="create-post-btn" type="button" class="btn btn-outline-primary fw-bold d-none d-md-block fs-6 text">Create Post</button></a>
+      <button type="button" class="btn position-relative">
+      <svg class=" position-relative" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="adjfhuy7hl7ostjvbblf7bm9bcul8q7o" class="crayons-icon"><title id="adjfhuy7hl7ostjvbblf7bm9bcul8q7o">Notifications</title>
+        <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z"></path>
+    </svg>
+  </button>
+    <button type="button" class="border rounded-circle " id="member-menu-button" aria-label="Navigation menu" aria-expanded="false">
+      <span class="crayons-avatar crayons-avatar--l"><img class="rounded-circle" alt="" id="nav-profile-image" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1474056%2Fabc742de-c2bf-4c89-ba0c-adddf725007b.png"></span>
+    </button>        
+      </div>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-weight: bold;">DEV Community</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container-fluid text-start mt-5">
+      <div class="row">
+        <div class="col-2 d-none d-md-block mt-4" id="aside__izquierdo">
+           <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"><a class="nav-link">🏠Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🗃️Reading List</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">📃Listings</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🎙️Podcasts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🎥Videos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🏷️Tags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🛍️Forem Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">❤️Sponsors</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🏳️‍🌈About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">📯Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">📖Guides</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🤔Software comparisons</a></li>
+            </ul>
+            <h5 class="my-3" style="font-weight: bold;">Other</h5>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"><a class="nav-link" href="#">👍Code of Conduct</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">🤓Privacy Policy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">👀Terms of use</a></li>
+            </ul>
+            <div class="flex justify-start mb-4">
+              <a href="https://twitter.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="padding-bottom:2px;" role="img" aria-labelledby="aiilk3emjv0xx9f267ebzq6oqigi0flo" class="crayons-icon c-link__icon"><title id="aiilk3emjv0xx9f267ebzq6oqigi0flo">Twitter</title>
+          <g id="surface1">
+          <path style=" stroke:none;fill-rule:evenodd;fill-opacity:1;" d="M 12 0 C 18.628906 0 24 5.371094 24 12 C 24 18.628906 18.628906 24 12 24 C 5.371094 24 0 18.628906 0 12 C 0 5.371094 5.371094 0 12 0 Z M 12 0 "></path>
+          <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 14.9375 7.386719 L 16.5 7.386719 L 13.082031 11.292969 L 17.105469 16.613281 L 13.953125 16.613281 L 11.488281 13.386719 L 8.664062 16.613281 L 7.097656 16.613281 L 10.753906 12.433594 L 6.894531 7.386719 L 10.125 7.386719 L 12.355469 10.335938 Z M 14.386719 15.675781 L 15.253906 15.675781 L 9.652344 8.273438 L 8.722656 8.273438 Z M 14.386719 15.675781 "></path>
+          </g>
+          </svg>
+          
+            </a>
+            <a href="https://facebook.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aepyaws5xtzz3p86e8bs8gebsvt9ly41" class="crayons-icon c-link__icon"><title id="aepyaws5xtzz3p86e8bs8gebsvt9ly41">Facebook</title>
+              <path d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z"></path>
+          </svg>
+          
+            </a>
+            <a href="https://github.com/forem" target="_blank" class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aq9vt527p2kf7l0blkvrd0eap56nk9mj" class="crayons-icon c-link__icon"><title id="aq9vt527p2kf7l0blkvrd0eap56nk9mj">Github</title>
+              <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z"></path>
+          </svg>
+          
+            </a>
+            <a href="https://instagram.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="alb8pw8s7we1vqlq7hti8wwwp8ps1dvp" class="crayons-icon c-link__icon"><title id="alb8pw8s7we1vqlq7hti8wwwp8ps1dvp">Instagram</title>
+              <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"></path>
+          </svg>
+          
+            </a>
+            <a href="https://twitch.com/thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8umxj80f4zkcmprsro75195f2enbyxz" class="crayons-icon c-link__icon"><title id="a8umxj80f4zkcmprsro75195f2enbyxz">Twitch</title>
+              <path d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z"></path>
+          </svg>
+          
+            </a>
+            <a href="https://fosstodon.org/@thepracticaldev" target="_blank" class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="amuoqyyb4tf9oril4yqjlrptogm7bu0r" class="crayons-icon c-link__icon"><title id="amuoqyyb4tf9oril4yqjlrptogm7bu0r">Mastodon</title>
+              <path d="M21.258 13.99c-.274 1.41-2.456 2.955-4.962 3.254-1.306.156-2.593.3-3.965.236-2.243-.103-4.014-.535-4.014-.535 0 .218.014.426.04.62.292 2.215 2.196 2.347 4 2.41 1.82.062 3.44-.45 3.44-.45l.076 1.646s-1.274.684-3.542.81c-1.25.068-2.803-.032-4.612-.51-3.923-1.039-4.598-5.22-4.701-9.464-.031-1.26-.012-2.447-.012-3.44 0-4.34 2.843-5.611 2.843-5.611 1.433-.658 3.892-.935 6.45-.956h.062c2.557.02 5.018.298 6.451.956 0 0 2.843 1.272 2.843 5.61 0 0 .036 3.201-.397 5.424zm-2.956-5.087c0-1.074-.273-1.927-.822-2.558-.567-.631-1.308-.955-2.229-.955-1.065 0-1.871.41-2.405 1.228l-.518.87-.519-.87C11.276 5.8 10.47 5.39 9.405 5.39c-.921 0-1.663.324-2.229.955-.549.631-.822 1.484-.822 2.558v5.253h2.081V9.057c0-1.075.452-1.62 1.357-1.62 1 0 1.501.647 1.501 1.927v2.79h2.07v-2.79c0-1.28.5-1.927 1.5-1.927.905 0 1.358.545 1.358 1.62v5.1h2.08V8.902l.001.001z"></path>
+          </svg>
+          </a>
+          <div class="mt-5">
+            <h5>My tags</h5>
+          </div>
+          
+          </div>
+          </div>
+        </div>
+        <!-- Este es el post-wraper -->
+        <div class="col col-md-9 col-xl-6" id="post-wrapper">
+          <div>
+            <ul class="d-flex position-relative" id="secondary__navbar" style="list-style-type: none">
+              <li class="mx-1 fw-bold btn ">Revelant</li>
+              <li class="mx-1 btn">Latest</li>
+              <li class="mx-1 btn">Top</li>
+
+            </ul>
+            <div id="post-container"></div>
+          </div>
+          <!-- Esto se va a sustituir por los Post dinamicos -->
+          </div>
+        <div class=" col-3 d-none d-xl-block mt-4" id="aside__derecho">
+            <section>
+              <div class="card right-aside mt-3">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title--listings mb-3"><strong>Listings</strong></h5>
+                    <a class="see-all" href="#">See all</a>
+                  </div>
+                  <p class="right-aside--listings">Nerd LEvel Tech<br><span class="aside__span--small">education</span>
+                  </p>
+                  <p class="right-aside--listings">Animated Portfolio Website using HTML CSS and Javascript | STEP BY
+                    STEP<br><span class="aside__span--small">education</span></p>
+                  <p class="right-aside--listings">React Typesxcript CRUD App - ReactJS Challenge 4 has been
+                    publised<br><span class="aside__span--small">education</span></p>
+                  <p class="right-aside--listings">NodeJS<br><span class="aside__span--small">collabs</span></p>
+                  <p class="right-aside--listings">Time Tracking Made Simple: Discover JCards Timesheet App<br><span
+                      class="aside__span--small">music</span></p>
+                  <p class="right-aside--listings text-center--allign mb-1"><strong class="right-aside--strong">Create a
+                      Listing</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="card right-aside mt-3">
+                <div class="card-body">
+                  <h5 class="right-aside--help mb-4"><strong>#discuss</strong></h5>
+                  <p class="right-aside--help">Team or Solo: Which Path Leads to Project Success?<br><span
+                      class="aside__span--small">8 comments</span></p>
+                  <div></div>
+                  <p class="right-aside--help">What was your win week?<br><span class="right-aside--span">New</span></p>
+                  <p class="right-aside--help">So... Is this PHP's Redemption? 😳<br><span class="aside__span--small">2
+                      comments</span></p>
+                  <p class="right-aside--help">What you learning about this weekend<br><span
+                      class="aside__span--small">7 comments</span></p>
+                  <p class="right-aside--help">AWhat inspired you to become a web developer<br><span
+                      class="aside__span--small">2 comments</span></p>
+                </div>
+              </div>
+              <div class="card right-aside mt-3">
+                <div class="card-body">
+                  <h5 class="right-aside--discuss mb-4"><strong>#watercooler</strong></h5>
+                  <p class="right-aside--discuss">Robot Companions: What Superpowers Would You Give Yours?<br><span
+                      class="aside__span--small">4 comments</span></p>
+                </div>
+              </div>
+            </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer__container ">
+
+    <p class="footer__container-text " style="text-align: center;"><a style="text-decoration: none;"
+        href="https://dev.to/">DEV Community</a>—A constructive and inclusive social network for software
+      developers. With you every step of your journy.</p>
+    <ul class="footer__container-list d-flex flex-wrap "
+      style=" display: flex; justify-content:center; list-style: none ">
+      <li class="footer__container-list-link " style="list-style: none; "><a style="text-decoration: none"
+          href="">Home</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Listing</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Postcasts</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Videos</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Tags</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">FAQ</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Forem Shop</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Sponsors</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">About</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Contact</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Guides</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Software comparasions</a>
+      </li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Code of Conduct</a></li>
+      <li class="footer__container-list-link"><a style="text-decoration: none;" href="">Privacy</a></li>
+    </ul>
+    <p class="footer__container-text-2 " style="text-align: center;">Built on <a style="text-decoration: none; "
+        href="https://dev.to/">Forem</a>—the <a style="text-decoration: none; " href="https://dev.to/">open
+        source</a> software that powers <a style="text-decoration: none; " href="https://dev.to/">DEV</a> and
+      other inclusive communities.</p>
+    <p class="footer__container-text-3 " style="text-align: center;">Made with love and <a
+        style="text-decoration: none; " href="https://dev.to/">Ruby On Rails</a>. Dev community ©️ 2016 - 2023.
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+  <script src="../js/homePage.js" type="module"></script>
+
+</body>
+</html>
