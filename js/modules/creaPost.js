@@ -47,3 +47,4 @@ publishPost.addEventListener("click", async () => {
   console.log(savedPost);
   window.open("../../views/homepage.html", "_self");
 });
+
