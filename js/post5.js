@@ -1,28 +1,33 @@
-const createpostCard = (postObject) => {
-  const { title, author, content, comentarios, tagsing, URL, key } = postObject;
-
-  const container = document.createElement("div");
-  container.classList.add("col");
-
-
+const createPostCard = (postObject) => {
+  const { titulo, autor, reacciones, comentarios, tagsin, imagen, key } = postObject;
 
   const postCard = document.createElement("div");
   postCard.classList.add(
+    "col",
+    "col-md-6",
+    "col-lg-4",
+    "mb-4",
+    "position-relative"
+  );
+
+  const card = document.createElement("div");
+  card.classList.add(
     "card",
+    "h-100",
     "post-card",
-    "p-0",
     "overflow-hidden",
-    "h-100"
+    "shadow",
+    "border-radius-10"
   );
 
   const row = document.createElement("div");
-  row.classList.add("row", "g-0", "h-100");
+  row.classList.add("row", "g-0");
 
   const containerImg = document.createElement("div");
   containerImg.classList.add("col-md-4");
   const postImage = document.createElement("img");
   postImage.classList.add("post-card__picture");
-  postImage.src = URL;
+  postImage.src = imagen;
   containerImg.appendChild(postImage);
 
   const cardBodyContainer = document.createElement("div");
@@ -31,57 +36,42 @@ const createpostCard = (postObject) => {
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
 
-  const cardTitle = document.createElement("h5");
-  cardTitle.classList.add("card-title", "text-center");
-  cardTitle.textContent = title;
+  const cardTitulo = document.createElement("h5");
+  cardTitulo.classList.add("card-titulo", "text-center");
+  cardTitulo.textContent = titulo;
 
   const ulFeatures = document.createElement("ul");
   ulFeatures.classList.add("list-group");
 
   const features = [
-    { label: "author", value: author },
-    { label: "content", value: content },
-    { label: "tag", value: tagsing },
-    { label: "comentarios", value:  comentarios },
+    { label: "autor", value: autor },
+    { label: "reacciones", value: reacciones },
+    { label: "tags", value: tagsin },
+    { label: "comentarios", value: comentarios },
   ];
 
   features.forEach((feature) => {
     const li = document.createElement("li");
     li.classList.add("list-group-item");
-    li.textContent = ${feature.label}: ${feature.value};
+    li.textContent = `${feature.label}: ${feature.value}`;
     ulFeatures.appendChild(li);
   });
 
-  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardTitulo);
   cardBody.appendChild(ulFeatures);
   cardBodyContainer.appendChild(cardBody);
   row.appendChild(containerImg);
   row.appendChild(cardBodyContainer);
-  postCard.appendChild(row);
-  aCard.appendChild(postCard);
-  container.appendChild(aCard);
+  card.appendChild(row);
+  postCard.appendChild(card);
 
-  return container;
+  return postCard;
 };
 
-const printposts = (postsArray, wrapperId) => {
-  const wrapper = document.getElementById(wrapperId);
-  wrapper.innerHTML = "";
-
-  const fragment = document.createDocumentFragment();
-
-  postsArray.forEach((post) => {
-    const postCard = createpostCard(post);
-    fragment.appendChild(postCard);
-  });
-
-  wrapper.appendChild(fragment);
-};
-
-const fetchAllposts = async () => {
+const fetchAllPosts = async () => {
   try {
     const response = await fetch(
-      https://post-9851b-default-rtdb.firebaseio.com/posts/.json
+      "https://post-9851b-default-rtdb.firebaseio.com/posts.json"
     );
     const data = await response.json();
     const keys = Object.keys(data);
@@ -93,18 +83,27 @@ const fetchAllposts = async () => {
   }
 };
 
-const printAllposts = async () => {
+const printPosts = (postsArray, wrapperId) => {
+  const wrapper = document.getElementById(wrapperId);
+  wrapper.innerHTML = "";
+
+  const fragment = document.createDocumentFragment();
+
+  postsArray.forEach((post) => {
+    const postCard = createPostCard(post);
+    fragment.appendChild(postCard);
+  });
+
+  wrapper.appendChild(fragment);
+};
+
+const printAllPosts = async () => {
   try {
-    const postsArray = await fetchAllposts();
-    printposts(postsArray, "posts-wrapper");
+    const postsArray = await fetchAllPosts();
+    printPosts(postsArray, "posts-wrapper");
   } catch (error) {
-    console.error("Error printing posts:", error);
+    console.error("Error fetching and printing posts:", error);
   }
 };
 
-let createBtn = document.getElementById("create-post-btn");
-createBtn.addEventListener("click", () => {
-  window.open("../views/crearpost.html", "_self");
-});
-
-printAllposts();
+printAllPost
