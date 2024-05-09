@@ -2,7 +2,7 @@ const postContainer = document.getElementById('post-container');
 
 const fetchPosts = async () => {
   try {
-    const response = await fetch('https://post-9851b-default-rtdb.firebaseio.com/posts.json');
+    const response = await fetch('https://post-9851b-default-rtdb.firebaseio.com');
     const posts = await response.json();
     return posts;
   } catch (error) {
@@ -18,17 +18,17 @@ const renderPost = (post) => {
   titleElement.textContent = post.titulo;
   postElement.appendChild(titleElement);
 
-  const tagsElement = document.createElement('div');
-  post.tags.forEach((tag) => {
+  const tagsinElement = document.createElement('div');
+  post.tagsin.forEach((tag) => {
     const tagElement = document.createElement('span');
     tagElement.textContent = tag;
-    tagsElement.appendChild(tagElement);
+    tagsinElement.appendChild(tagElement);
   });
-  postElement.appendChild(tagsElement);
+  postElement.appendChild(tagsinElement);
 
-  const authorElement = document.createElement('p');
-  authorElement.textContent = `Author: ${post.autor}`;
-  postElement.appendChild(authorElement);
+  const autorElement = document.createElement('p');
+  autorElement.textContent = `autor: ${post.autor}`;
+  postElement.appendChild(autorElement);
 
   const contentElement = document.createElement('p');
   contentElement.textContent = post.contenido;
