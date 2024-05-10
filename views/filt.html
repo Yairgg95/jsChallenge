@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Filtered Posts</title>
+</head>
+<body>
+
+  <input type="text" id="category-filter" placeholder="Filtra por Titulo">
+  <ul id="post-list"></ul>
+
+  <script>
+    const Posts_BASE_URL = "https://post-9851b-default-rtdb.firebaseio.com/posts";
+
+    const fetchAllPosts = async () => {
+      let response = await fetch(`${Posts_BASE_URL}/.json`);
+      let data = await response.json();
+      let keys = Object.keys(data);
+      let PostsArray = keys.map((key) => ({ ...data[key], key }));
+      return PostsArray;
+    };
+
+    fetchAllPosts().then((data) => { 
+      const postList = document.getElementById("post-list");
+      postList.innerHTML = ""; 
+
+      const filterInput = document.getElementById("category-filter");
+
+      filterInput.addEventListener("keyup", (event) => {
+        let query = event.target.value.toLowerCase();
+        const filteredPosts = data.filter((post) =>
+          post.titulo && post.titulo.toLowerCase().includes(query)
+        );
+
+        postList.innerHTML = ""; 
+
+        for (const post of filteredPosts) {
+          const listItem = document.createElement("li");
+          listItem.textContent = post.titulo || "Post Title";
+          postList.appendChild(listItem);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
